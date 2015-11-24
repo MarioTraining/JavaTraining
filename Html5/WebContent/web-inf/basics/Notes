@@ -1,0 +1,14 @@
+Best Practice 1: Always add a heading to explicit sectioning content.
+
+	It's always better - mainly for accessibility reasons - to include a 
+	heading (a <h1>, <h2>...<h6>) in each sectioning element 
+	(<section>, <article>, <nav>, <aside>), but also after the <body> 
+	element (called a "sectioning root"). 
+	
+	<section>
+   		<header>
+      		<h1>Blog post of April 2015</h1>
+      		<p>Posted by Michel Buffa...</p>
+   		</header>
+		...
+	</section>
