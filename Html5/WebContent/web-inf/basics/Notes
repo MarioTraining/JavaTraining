@@ -1,14 +1,76 @@
-Best Practice 1: Always add a heading to explicit sectioning content.
+** Best Practice 1: 
+	Always add a heading to explicit sectioning content.
 
 	It's always better - mainly for accessibility reasons - to include a 
 	heading (a <h1>, <h2>...<h6>) in each sectioning element 
 	(<section>, <article>, <nav>, <aside>), but also after the <body> 
 	element (called a "sectioning root"). 
 	
-	<section>
-   		<header>
-      		<h1>Blog post of April 2015</h1>
-      		<p>Posted by Michel Buffa...</p>
-   		</header>
-		...
-	</section>
+	<body>
+	    <h1>Example Blog</h1>
+	    <section>
+	       <header>
+	          <h2>Blog post of April 2015</h2>
+	          <p>Posted by Michel Buffa...</p>
+	       </header>
+	      <p>Content of the blog post...</p>
+	   </section>
+	 </body>
+	 
+	 The <header> element is just a container. It is not taken into account for defining new 
+	 sections of a document nor does it affect the hierarchy levels.
+
+ 
+** Best Practice 2: 
+	Try not to rely on implicit sectioning, use <section>, <article>, etc Instead of just <h1>...<h6>
+
+
+	<body>
+	 <h1>Apples</h1>
+	 <p>Apples are fruit.</p>
+	 <section>
+	     <h1>Taste</h1>
+	     <p>They taste lovely.</p>
+	     <section>
+	         <h1>Sweet</h1>
+	         <p>Red apples are sweeter than green ones.</p>
+	     </section>
+	 </section>
+	 <section>
+	     <h1>Color</h1>
+	     <p>Apples come in various colors.</p>
+	 </section>
+	</body>
+	
+** Best Practice 3: 
+	Visualizing the table of contents is useful for debugging the structure of your page, 
+	and checking the presence of headings after sectioning content.
+
+
+** Best Practice 4: 
+	For accessibility matters, a best practice is to split your page content 
+	into "regions" defined by the five 5 elements (aside, footer, header, main and nav) learned this week.
+
+	https://www.paciellogroup.com/blog/2015/09/easy-content-organisation-with-html5/
+	
+** Best Practice 5: 
+	In order to NOT display the heading content on screen  the recommended technique  
+	is described in this article by Steve Faulkner. Do not use display:none or visibility:hidden in 
+	your CSS stylesheet, as in that case the heading content will never be vocalized by screen readers, 
+	and more generally by assistive technologies. 
+
+	https://www.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/
+
+	As an illustration of the recommended technique, see this JSBin version of the blog example 
+	that hides the <h2>Navigation menu</h2> from the <nav>...</nav> element, using the CSS technique 
+	explained in the above link.
+
+** Best Practice 6:
+	it is not advised to include interactive content (links, controls etc) that is hidden offscreen 
+	(it is in fact a violation of the W3C WCAG 2.0 Guidelines). All interactive content must have 
+	a visible focus indicator (and be on screen when focused).
+	
+** Recommendation:
+	Use h1 as top level headings only, use h2...h6 in sectioning content
+	
+		
