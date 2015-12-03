@@ -73,4 +73,25 @@
 ** Recommendation:
 	Use h1 as top level headings only, use h2...h6 in sectioning content
 	
-		
+** Note:
+	A polyfill is a piece of JavaScript code you include in your HTML page, that will emulate 
+	HTML5 features not yet implemented in browsers. Usually a polyfill starts emulating a 
+	feature only when native support is not detected.	
+	
+** Note:
+	There are 3 ways to provide machine-readable content embedded in a classical Web document.
+	Adding microdata to Web pages helps search engines to better understand the pages' content, 
+	their topics, etc. The main purpose of microdata is Search Engine Optimization.
+	
+	We will look more closely at the itemprop, itemscope and itemtype attributes
+	
+	Testing tool:
+	https://developers.google.com/structured-data/testing-tool/
+	
+	Schema:
+	http://schema.org/
+	
+	Microdata Generators:
+	http://www.barryko.com/seo/html5-microdata-schema-generator/ 
+	http://www.microdatagenerator.com/
+	http://schema-creator.org
