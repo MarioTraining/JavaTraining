@@ -1,1 +1,39 @@
+** Restriction 1: 
+	You cannot embed a youtube or dailymotion video using the <video> element
+	
+	Help! <video src="my youtube video url"></video> doesn work.
+	
+	You cannot directly embed videos from most of the popular social Web sites such as YouTube,
+	Dailymotion, Vimeo, etc. For commercial reasons, and because advertising is automatically 
+	added to the videos, thes Web sites do not allow "regular" embedding of their videos.
+
+	While they use HTML5 to render their videos, these hosting sites (YouTube, etc.) use 
+	rather complex techniques in order to prevent you from using them with the <video> element. 
+	Instead, you often need to embed an <iframe> that will render the HTML5 videos in your 
+	Web site, and of course, the advertising that comes along with them
+
+	<iframe width="560" height="315" 
+	src="https://www.youtube.com/embed/ZH1XOsv8Oyo" 
+	frameborder="0" allowfullscreen></iframe>
+
+** Restriction 2: 
+	The <track> element cannot be used with a 
+	file:// URL. Please use http:// and a Web server. Your server must use a special 
+	MIME format for the .vtt files: text/vtt;charset=utf-8 (set by default on most servers now).
+
+	Examples of the lines to add to an Apache Web server:
+
+	<Files mysubtitle.vtt>
+		ForceType text/vtt;charset=utf-8
+	</Files>
+	It might be worth mentioning that most browsers work fine with WebVTT even if 
+	the MIME Type is not set, but Internet Explorer doesn’t: in fact it will ignore 
+	WebVTT entirely unless the MIME Type is set correctly!
+	
 ** Best Practice 1:
+	do not use autoplay and add preload="none" if you target mobile devices or 
+	if you have multiple audio/video on the same page. For example, this page 
+	contains many audio elements and it does not make sense to have them preload or autoplay.
+	
+** Best Practice 2:	
+	think twice before using the autoplay attribute, even for desktop applications.
